@@ -2,11 +2,9 @@ let tarefas = [];
 
 function adicionarTarefa() {
   
-
-  
   const inputtarefa = document.getElementById("inputtarefa");
   let tarefa = inputtarefa.value.trim();
-
+  
   const mensagem = document.getElementById("mensagem");
   
   if (tarefa == "") {
@@ -22,7 +20,6 @@ function adicionarTarefa() {
     tarefas.push(tarefa);
     renderizartarefas();
   }
-
   
   inputtarefa.value = "";
 }
@@ -30,7 +27,7 @@ function adicionarTarefa() {
 function renderizartarefas() {
   
   const listatarefas = document.getElementById("listatarefas");
-  listatarefas.innerHTML;
+  listatarefas.innerHTML = "";
   
 
   for (let i = 0; i < tarefas.length; i++) {
@@ -53,7 +50,6 @@ function renderizartarefas() {
   }
 }
 function removertarefa(i) {
-  console.log("removertarefa indice:", 1);
   tarefas.splice(i, 1);
   renderizartarefas();
   mensagem.textContent = "Item da lista removido com sucesso!";

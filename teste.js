@@ -30,7 +30,7 @@ function adicionarTarefa() {
 function renderizartarefas() {
   //Cria novo item (li) e insere na (lista ul)
   const listatarefas = document.getElementById("listatarefas");
-  listatarefas.innerHTML;
+  //listatarefas.innerHTML; (ERRADO)
   //for itens na lista
   //1. item inicial (iterador)
   //2. item final (condição)
