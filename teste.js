@@ -1,21 +1,21 @@
 let tarefas = [];
 
 function adicionarTarefa() {
-  
+  //Salvar tarefas
 
-  
+  //Recebe valor do input do usuário
   const inputtarefa = document.getElementById("inputtarefa");
   let tarefa = inputtarefa.value.trim();
 
   const mensagem = document.getElementById("mensagem");
-  
+  //se o valor do input for vazio então mostra uma mensagem de erro para o usuário
   if (tarefa == "") {
-    
+    //Mostre uma mensagem de erro
     let mensagemerro = "Digite uma tarefa para adicioná-la a sua lista!";
     mensagem.textContent = mensagemerro;
     mensagem.style.color = "#A34743";
   } else {
-    
+    //Mensagem de tarefa adicionada com sucesso
     let mensagemsucesso = "Tarefa adicionada com sucesso!";
     mensagem.textContent = mensagemsucesso;
     mensagem.style.color = "#28A745";
@@ -23,15 +23,19 @@ function adicionarTarefa() {
     renderizartarefas();
   }
 
-  
+  //Limpa o campo de texto depois de adicionar a tarefa
   inputtarefa.value = "";
 }
 
 function renderizartarefas() {
-  
+  //Cria novo item (li) e insere na (lista ul)
   const listatarefas = document.getElementById("listatarefas");
   listatarefas.innerHTML;
-  
+  //for itens na lista
+  //1. item inicial (iterador)
+  //2. item final (condição)
+  //3. se vai de 1 em 1 elemento ou se pula
+  //for(iterador, condição, frequencia)
 
   for (let i = 0; i < tarefas.length; i++) {
     let novatarefa = document.createElement("li");
