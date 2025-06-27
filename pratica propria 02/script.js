@@ -27,7 +27,3 @@ function adicionarTarefa() {
   //Limpa o campo de texto depois de adicionar a tarefa
   inputtarefa.value = "";
 }
-
-
-//#28A745 green
-//#A34743 red 
