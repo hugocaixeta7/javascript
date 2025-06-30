@@ -72,3 +72,28 @@ function limparlista() {
   mensagem.textContent = "Lista de tarefas limpa com sucesso!";
   mensagem.style.color = "#28A745";
 }
+
+function adicionarTarefa() {
+    
+    const inputtarefa = document.getElementById("inputtarefa");
+    let tarefa = inputtarefa.value.trim();
+    
+    const mensagem = document.getElementById("mensagem");
+    
+    if (tarefa == "") {
+      
+      let mensagemerro = "Digite uma tarefa para adicioná-la a sua lista!";
+      mensagem.textContent = mensagemerro;
+      mensagem.style.color = "#A34743";
+    } else {
+      
+      let mensagemsucesso = "Tarefa adicionada com sucesso!";
+      mensagem.textContent = mensagemsucesso;
+      mensagem.style.color = "#28A745";
+      tarefas.push(tarefa);
+      renderizartarefas();
+    }
+    
+    inputtarefa.value = "";
+  }
+  
